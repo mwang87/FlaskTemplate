@@ -1,11 +1,11 @@
 build:
 	docker build -t flasktemplate .
 
-bash: clean
+bash:
 	docker run -it -p 5023:5000 --rm --name flasktemplate flasktemplate bash
 
-interactive: clean
+interactive:
 	docker run -it -p 5023:5000 --rm --name flasktemplate flasktemplate /app/run_server.sh
 
-server: clean
+server:
 	docker run -it -p 5023:5000 --rm --name flasktemplate flasktemplate /app/run_server.sh
